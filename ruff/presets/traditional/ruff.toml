@@ -2,4 +2,26 @@ line-length = 120
 
 [lint]
 select = ["ALL"]
-ignore = []
+ignore = [
+    "CPY", # missing-copyright-notice - It errors when there is no copyright notice.
+    
+    "D100", # I don't like enforcement of docstrings as I often do not want them
+    "D101",
+    "D102",
+    "D103",
+    "D104",
+    "D105",
+    "D106",
+    "D107",
+    "D203", # This enforces one blank line before clsas docstring which conflicts with D211
+    "D213", # This enforces blank line before multi-line-summary which conflicts with D212
+    
+    "T20", # This enforces disallowed prints
+    "FIX", # This disallows fixme/todo/xxx/hack
+    "TRY003", # It disallows text inside exception classes
+    "EM", # It disallows string in the exception
+    "TD002", # too corporate
+    "TD003", # too corporate
+    "PERF203", # It enforces that try-except cannot be in a loop
+    "SIM105" # idk 
+]
