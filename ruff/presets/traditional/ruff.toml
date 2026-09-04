@@ -36,7 +36,7 @@ ignore = [
 ]
 
 [lint.ruff]
-strictly-empty-init-modules = true # This is an important upgrade for RUF67
+strictly-empty-init-modules = true # This make __init__ strictly empty - a feature improving strictness of RUF067
 
 [lint.per-file-ignores]
 "tests/**" = ["S101"] # Allow assertions in test files. # https://docs.astral.sh/ruff/rules/assert/
