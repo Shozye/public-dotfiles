@@ -7,8 +7,7 @@ select = ["ALL"]
 fixable = ["ALL"]
 preview = true
 ignore = [
-    "CPY", # Allow files without copyright notices.
-    # https://docs.astral.sh/ruff/rules/missing-copyright-notice/
+    "CPY", # Allow files without copyright notices. https://docs.astral.sh/ruff/rules/missing-copyright-notice/
 
     "D100", # Allow public modules without docstrings. https://docs.astral.sh/ruff/rules/undocumented-public-module/
     "D101", # Allow public classes without docstrings. https://docs.astral.sh/ruff/rules/undocumented-public-class/
@@ -16,35 +15,25 @@ ignore = [
     "D103", # Allow public functions without docstrings. https://docs.astral.sh/ruff/rules/undocumented-public-function/
     "D104", # Allow public packages without docstrings. https://docs.astral.sh/ruff/rules/undocumented-public-package/
     "D105", # Allow magic methods without docstrings. https://docs.astral.sh/ruff/rules/undocumented-magic-method/
-    "D106", # Allow public nested classes without docstrings.
-    # https://docs.astral.sh/ruff/rules/undocumented-public-nested-class/
-    "D107", # Allow public __init__ methods without docstrings.
-    # https://docs.astral.sh/ruff/rules/undocumented-public-init/
-    "D203", # Use D211 instead: no blank line before class docstrings.
-    # https://docs.astral.sh/ruff/rules/incorrect-blank-line-before-class/
-    "D213", # Use D212 instead: summary starts on the first docstring line.
-    # https://docs.astral.sh/ruff/rules/multi-line-summary-second-line/
+    "D106", # Allow public nested classes without docstrings. https://docs.astral.sh/ruff/rules/undocumented-public-nested-class/
+    "D107", # Allow public __init__ methods without docstrings. https://docs.astral.sh/ruff/rules/undocumented-public-init/
+    "D203", # Use D211 instead: no blank line before class docstrings. https://docs.astral.sh/ruff/rules/incorrect-blank-line-before-class/
+    "D213", # Use D212 instead: summary starts on the first docstring line. https://docs.astral.sh/ruff/rules/multi-line-summary-second-line/
 
-    "T20", # Allow print() and pprint() calls.
-    # https://docs.astral.sh/ruff/rules/#flake8-print-t20
-    "FIX", # Allow TODO, FIXME, XXX, and HACK comments.
-    # https://docs.astral.sh/ruff/rules/#flake8-fixme-fix
-    "TRY003", # Allow long exception messages at raise sites.
-    # https://docs.astral.sh/ruff/rules/raise-vanilla-args/
-    "EM", # Allow inline exception messages in exception constructors.
-    # https://docs.astral.sh/ruff/rules/#flake8-errmsg-em
+    "T20", # Allow print() and pprint() calls. https://docs.astral.sh/ruff/rules/#flake8-print-t20
+    "FIX", # Allow TODO, FIXME, XXX, and HACK comments. https://docs.astral.sh/ruff/rules/#flake8-fixme-fix
+    "TRY003", # Allow long exception messages at raise sites. https://docs.astral.sh/ruff/rules/raise-vanilla-args/
+    "EM", # Allow inline exception messages in exception constructors. https://docs.astral.sh/ruff/rules/#flake8-errmsg-em
     "TD002", # Do not require an author in TODO comments. https://docs.astral.sh/ruff/rules/missing-todo-author/
     "TD003", # Do not require issue references in TODO comments. https://docs.astral.sh/ruff/rules/missing-todo-link/
     "PERF203", # Allow try-except blocks inside loops. https://docs.astral.sh/ruff/rules/try-except-in-loop/
-    "SIM105", # Allow try-except-pass instead of contextlib.suppress().
-    # https://docs.astral.sh/ruff/rules/suppressible-exception/
+    "SIM105", # Allow try-except-pass instead of contextlib.suppress(). https://docs.astral.sh/ruff/rules/suppressible-exception/
 
-    "INP001", # Allow intentional implicit namespace packages without __init__.py.
-    # https://docs.astral.sh/ruff/rules/implicit-namespace-package/
+    "INP001", # Allow intentional implicit namespace packages without __init__.py. https://docs.astral.sh/ruff/rules/implicit-namespace-package/
 ]
 
 [lint.ruff]
-strictly-empty-init-modules = true
+strictly-empty-init-modules = true # This is an important upgrade for RUF67
 
 [lint.per-file-ignores]
 "tests/**" = ["S101"] # Allow assertions in test files. # https://docs.astral.sh/ruff/rules/assert/
