@@ -7,4 +7,4 @@ Goal is to use it for my CI configurations and for synchronization files without
 
 ## Ruff Presets
 
-These are my personal Ruff presets, synchronized across projects with [`ruff-sync`](https://github.com/Kilo59/ruff-sync).
+These are my personal Ruff presets with the goal to synchronize them through [`ruff-sync`](https://github.com/Kilo59/ruff-sync).
