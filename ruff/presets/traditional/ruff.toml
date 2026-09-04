@@ -2,12 +2,15 @@ line-length = 120
 
 [lint]
 select = ["ALL"]
-# Enable preview lint behavior so unused imports in __init__.py are flagged.
-# https://docs.astral.sh/ruff/rules/unused-import/
+# Enable preview mode, which RUF067 requires.
+# https://docs.astral.sh/ruff/rules/non-empty-init-module/
 preview = true
 # Do not select every preview-only rule through select = ["ALL"].
 # https://docs.astral.sh/ruff/settings/#lint_explicit-preview-rules
 explicit-preview-rules = true
+# Require __init__.py files to have no code, imports, or docstrings.
+# https://docs.astral.sh/ruff/rules/non-empty-init-module/
+extend-select = ["RUF067"]
 ignore = [
     "CPY", # Allow files without copyright notices.
     # https://docs.astral.sh/ruff/rules/missing-copyright-notice/
@@ -44,6 +47,11 @@ ignore = [
     "INP001", # Allow intentional implicit namespace packages without __init__.py.
     # https://docs.astral.sh/ruff/rules/implicit-namespace-package/
 ]
+
+[lint.ruff]
+# Apply RUF067's strict mode to __init__.py files.
+# https://docs.astral.sh/ruff/settings/#lint_ruff_strictly-empty-init-modules
+strictly-empty-init-modules = true
 
 [lint.per-file-ignores]
 "tests/**" = ["S101"] # Allow assertions in test files.
