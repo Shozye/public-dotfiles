@@ -30,7 +30,6 @@ ignore = [
     "TD002", # Do not require an author in TODO comments. https://docs.astral.sh/ruff/rules/missing-todo-author/
     "TD003", # Do not require issue references in TODO comments. https://docs.astral.sh/ruff/rules/missing-todo-link/
     "PERF203", # Allow try-except blocks inside loops. https://docs.astral.sh/ruff/rules/try-except-in-loop/
-    "SIM105", # Allow try-except-pass instead of contextlib.suppress(). https://docs.astral.sh/ruff/rules/suppressible-exception/
 
     "INP001", # Allow intentional implicit namespace packages without __init__.py. https://docs.astral.sh/ruff/rules/implicit-namespace-package/
 ]
