@@ -33,6 +33,8 @@ ignore = [
     "PERF203", # Allow try-except blocks inside loops. https://docs.astral.sh/ruff/rules/try-except-in-loop/
 
     "INP001", # Allow intentional implicit namespace packages without __init__.py. https://docs.astral.sh/ruff/rules/implicit-namespace-package/
+    "RUF106",
+    "RUF201"
 ]
 
 [lint.ruff]
