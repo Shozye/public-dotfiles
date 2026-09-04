@@ -19,6 +19,9 @@ ignore = [
     "D107", # Allow public __init__ methods without docstrings. https://docs.astral.sh/ruff/rules/undocumented-public-init/
     "D203", # Use D211 instead: no blank line before class docstrings. https://docs.astral.sh/ruff/rules/incorrect-blank-line-before-class/
     "D213", # Use D212 instead: summary starts on the first docstring line. https://docs.astral.sh/ruff/rules/multi-line-summary-second-line/
+    "D417", # Allow docstrings to omit argument descriptions. https://docs.astral.sh/ruff/rules/undocumented-param/
+    "DOC201", # Allow return statements without a Returns section. https://docs.astral.sh/ruff/rules/docstring-missing-returns/
+    "DOC501", # Allow raised exceptions without a Raises section. https://docs.astral.sh/ruff/rules/docstring-missing-exception/
 
     "T20", # Allow print() and pprint() calls. https://docs.astral.sh/ruff/rules/#flake8-print-t20
     "FIX", # Allow TODO, FIXME, XXX, and HACK comments. https://docs.astral.sh/ruff/rules/#flake8-fixme-fix
