@@ -37,8 +37,5 @@ ignore = [
     "RUF201" # Allow use of codes instead of names in pyproject.toml
 ]
 
-[lint.ruff]
-strictly-empty-init-modules = true # This make __init__ strictly empty - a feature improving strictness of RUF067
-
 [lint.per-file-ignores]
 "tests/**" = ["S101"] # Allow assertions in test files. # https://docs.astral.sh/ruff/rules/assert/
